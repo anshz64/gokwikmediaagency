@@ -1,7 +1,7 @@
 
 /* Section Header with Background */
 .about-header {
-  background: url("..\assets\about\about-back.png") no-repeat center center/cover;
+  background: url("../../public/assets/about/about-back.png") no-repeat center center/cover;
   text-align: center;
   padding: 250px ;
   color: white;
