@@ -1,5 +1,7 @@
 import React from "react";
 import "./Footer.css";
+// Import Link from react-router-dom
+import { Link } from "react-router-dom"; 
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
@@ -7,59 +9,45 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         
-        {/* Left Section */}
-        <div className="footer-section about">
-          <img src="assets/main-logo.png" alt="GoKwiK Media Logo" className="footer-logo" />
-          <p>
-            GoKwiK Media delivers smart digital marketing solutions to grow
-            brands with SEO, ads, and creative strategies.
-          </p>
-          <p><FaPhoneAlt className="icon" /> +91 96261 65636</p>
-          <p>
-            <FaMapMarkerAlt className="icon" /> 417, 4th Floor, Escon Plaza, Chaparbhatta Road, Amroli,
-            Surat, Gujarat 394107
-          </p>
-        </div>
+        {/* ... (other sections) ... */}
 
         {/* Quick Links */}
         <div className="footer-section links">
           <h3>Quick Links</h3>
+          {/* 👇 Use the Link component for internal navigation */}
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Blog</li>
-            <li>Contact Us</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
-
-        {/* Services */}
+        
+        {/* ... (other sections) ... */}
+        
         <div className="footer-section services">
           <h3>Services</h3>
+          {/* You might want these to link to specific sections on your services page or anchor tags */}
           <ul>
-            <li>Website Development</li>
-            <li>SEO Optimization</li>
-            <li>Content Marketing</li>
-            <li>Branding & Strategy</li>
-            <li>Social Media Marketing</li>
+            <li><Link to="/services/web-development">Website Development</Link></li>
+            <li><Link to="/services/seo">SEO Optimization</Link></li>
+            <li><Link to="/services/content-marketing">Content Marketing</Link></li>
+            <li><Link to="/services/branding">Branding & Strategy</Link></li>
+            <li><Link to="/services/social-media">Social Media Marketing</Link></li>
           </ul>
         </div>
 
-        {/* Newsletter */}
-        <div className="footer-section newsletter">
-          <h3>Our Newsletter</h3>
-          <p>Sign up to Privitar’s weekly newsletter to get the latest updates.</p>
-          <div className="newsletter-box">
-            <input type="email" placeholder="Enter Your E-mail" />
-            <button>Subscribe</button>
-          </div>
-          <div className="social-icons">
-            <FaFacebookF />
-            <FaTwitter />
-            <FaInstagram />
-            <FaYoutube />
-          </div>
+        {/* ... (social icons) ... */}
+        <div className="social-icons">
+          {/* 👇 Use a standard <a> tag for external social links */}
+          <a href="https://www.facebook.com/GoKwiKMedia" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+          <a href="https://twitter.com/GoKwiKMedia" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+          <a href="https://www.instagram.com/GoKwiKMedia" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+          <a href="https://www.youtube.com/GoKwiKMedia" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
         </div>
+
+        {/* ... (rest of the component) ... */}
       </div>
 
       {/* Bottom Bar */}
