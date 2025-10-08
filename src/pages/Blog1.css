@@ -1,0 +1,82 @@
+.blog1-section {
+  padding: 0;
+  margin: 0;
+}
+
+/* Section Header with Background */
+.blog1-header {
+  height: 450px;            /* or auto if you want to adjust with content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+
+  background: url("C:\Users\ic\gokwik-media\public\assets\blog\header.png") no-repeat center center;
+  background-size: contain;   /* use 'cover' if you prefer full-bleed */
+  background-color: #f5f5f5;  /* fallback behind transparent areas */
+}
+
+.blog1-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* stronger shadow */
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient border at the bottom */
+.blog1-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px; /* thickness of the gradient bar */
+  width: 100%;
+  background: linear-gradient(90deg, #3b82f6, #ef4444); /* blue to red */
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+
+.blog1-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.blog1-content h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.blog1-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.blog1-tag {
+  background: linear-gradient(90deg, #3b82f6, #ef4444);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.blog1-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,89 @@
+/* Navbar.css */
+
+/* Navbar wrapper */
+.navbar {
+  width: 100%;
+  max-width: 1440px;   /* keeps it centered */
+  height: 103px;       /* matches Figma */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo img {
+  width: 174.24px;     /* Figma size */
+  height: 58px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 20px;
+  color: #333;
+  display: none; /* hide extra text if your image already has text */
+}
+
+/* Menu */
+.navbar-menu {
+  display: flex;
+  gap: 32px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active {
+  color: #ff3b3b;                  /* red highlight */
+  border-bottom: 2px solid #ff3b3b;
+}
+
+/* Button */
+.navbar-button {
+  background: #0066ff;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navbar-button:hover {
+  background: #004bcc;
+}
+
+/* Responsive (for small devices) */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-menu {
+    display: none; /* hide menu on mobile (can replace with hamburger later) */
+  }
+
+  .navbar-button {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}

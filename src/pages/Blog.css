@@ -1,0 +1,241 @@
+/* Section Header with Background */
+.blog-header {
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("C:\Users\ic\gokwik-media\public\assets\blog\header.png") no-repeat center center;
+  background-size: contain;
+  background-color: transparent;
+
+}
+
+/* Blog Grid Container */
+.blog-grid {
+  padding: 110px 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Individual Blog Card */
+.blog-card {
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-card:hover {
+  border-color: #f43f5e;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Blog Image Container */
+.blog-img {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 17px 17px 0 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Date Badge */
+.date-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #f43f5e, #dc2626);
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.4);
+}
+
+.date-number {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+/* Blog Content */
+.blog-content {
+  padding: 30px 25px 25px 25px;
+}
+
+.blog-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.blog-content p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  height: auto;
+  overflow: visible;
+}
+
+/* Blog Card Footer */
+.blog-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.learn-link {
+  text-decoration: none;
+}
+
+.blog-read-more {
+  background: linear-gradient(90deg, #4263eb 0%, #e53e3e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(66, 99, 235, 0.3);
+  width: 140px;
+}
+
+.blog-read-more:hover {
+  background: linear-gradient(90deg, #3b50df 0%, #dc2626 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(66, 99, 235, 0.4);
+}
+
+.blog-arrow {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-arrow img {
+  width: 45px;
+  height: 45px;
+}
+
+.blog-arrow:hover {
+  background: linear-gradient(135deg, #4263eb, #e53e3e);
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+.blog-arrow:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 60px 4%;
+  }
+  
+  .blog-content {
+    padding: 25px 20px 20px 20px;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.25rem;
+  }
+  
+  .date-badge {
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    left: 15px;
+  }
+  
+  .date-number {
+    font-size: 16px;
+  }
+  
+  .date-month {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 4%;
+  }
+  
+  .blog-img {
+    height: 200px;
+  }
+  
+  .blog-content {
+    padding: 20px 18px 18px 18px;
+  }
+  
+  .blog-content h2 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .blog-content p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .blog-read-more {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  .blog-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .blog-arrow img {
+    width: 18px;
+    height: 18px;
+  }
+}
