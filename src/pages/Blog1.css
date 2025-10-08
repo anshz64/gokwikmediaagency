@@ -12,7 +12,7 @@
   text-align: center;
   
 
-  background: url("C:\Users\ic\gokwik-media\public\assets\blog\header.png") no-repeat center center;
+  background: url("../../public/assets/blog/header.png") no-repeat center center;
   background-size: contain;   /* use 'cover' if you prefer full-bleed */
   background-color: #f5f5f5;  /* fallback behind transparent areas */
 }
